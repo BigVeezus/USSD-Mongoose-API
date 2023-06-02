@@ -7,12 +7,16 @@ router.get("/", function (req, res, next) {
 });
 
 router.post("/", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { phoneNumber, text } = req.body;
+  console.log(text);
   let response;
 
   if (text === "") {
     response = `CON Enter your first name`;
+  }
+  if (text !== "") {
+    response = `CON Enter your phone number`;
   }
 
   setTimeout(() => {
